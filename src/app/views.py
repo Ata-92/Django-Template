@@ -7,8 +7,13 @@ from django.shortcuts import render
     # return HttpResponse("Hello World!")
 
 def home_view(request):
+    # context = {
+    #     "first_name": "Ata",
+    #     "last_name": "Dev"
+    # }
     context = {
-        "first_name": "Ata",
-        "last_name": "Dev"
+        'school': 'clarusway',
+        'dict1': {'django': 'best framework'},
+        'my_list': [2, 3, 4]
     }
     return render(request, "app/home.html", context)

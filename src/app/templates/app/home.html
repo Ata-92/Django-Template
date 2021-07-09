@@ -7,6 +7,38 @@
   <title>Document</title>
 </head>
 <body>
-  <p>{{first_name}} {{last_name}}</p>
+  <!-- <p>{{first_name}} {{last_name}}</p> -->
+
+  {% if my_list %}
+    "List is not empty"
+  {% endif %}
+
+  <br><br>
+
+  {% for num in my_list %}
+    <li>{{num}}</li>
+  {% endfor %}
+  {{my_list.0}}
+
+  <br><br>
+
+  {{school | upper}}
+
+  {# This is a comment #}
+
+
+  {% comment %}
+    This is a multiline comment
+  {% endcomment %}
+
+  <!-- This is also  a comment -->
+
+  <br><br>
+
+  {{dict1.keys}}
+
+  <br><br>
+
+
 </body>
 </html>
